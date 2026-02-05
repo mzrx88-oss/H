@@ -2,8 +2,8 @@
 const startLoveDate = new Date("2025-06-15T00:00:00"); 
 
 // بيانات الدخول - عدلها براحتك
-const CORRECT_USER = ""; 
-const CORRECT_PASS = "";
+const CORRECT_USER = "Hodoa"; 
+const CORRECT_PASS = "1102008";
 
 function checkLogin() {
     const user = document.getElementById('username').value;
