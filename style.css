@@ -23,15 +23,15 @@ body {
     background-repeat: no-repeat;
 }
 
-/* ربط الصور بالخلفيات */
-.bg-image-14 { background-image: url('./images/IMG-14.jpg'); }
-.bg-image-15 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/IMG-15.jpg'); }
-.bg-image-16 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/IMG-16.jpg'); }
+/* ربط الصور المرفوعة مباشرة (بدون فولدر) */
+.bg-image-14 { background-image: url('IMG-14.jpg'); }
+.bg-image-15 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG-15.jpg'); }
+.bg-image-16 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG-16.jpg'); }
 
-/* --- ستايل صفحة تسجيل الدخول (زي الصورة اللي بعتها بالظبط) --- */
+/* --- ستايل صفحة تسجيل الدخول (شفاف ببراويز سوداء) --- */
 .login-box {
-    background: rgba(255, 255, 255, 0.02); /* شفافية شبه كاملة عشان الورد يبان */
-    border: 2px solid #000000; /* برواز أسود فحم */
+    background: rgba(255, 255, 255, 0.02); 
+    border: 2px solid #000000; 
     padding: 40px; 
     border-radius: 20px;
     backdrop-filter: blur(5px); 
@@ -52,7 +52,7 @@ input {
     padding: 14px; 
     border-radius: 12px; 
     background: transparent !important; 
-    border: 2px solid #000000 !important; /* برواز أسود واضح */
+    border: 2px solid #000000 !important; 
     color: #000000 !important; 
     font-weight: bold;
     outline: none;
@@ -122,6 +122,7 @@ h1, .heart-words {
 
 .hidden { display: none !important; }
 
-/* سكرول بار نحيف للمستطيل */
+/* سكرول بار نحيف */
 .text-container::-webkit-scrollbar { width: 3px; }
 .text-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+    
