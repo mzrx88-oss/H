@@ -1,0 +1,127 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #000;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* أنيميشن لظهور الكلام بنعومة */
+@keyframes softFade {
+    0% { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.full-page {
+    height: 100vh; width: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    position: relative; text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ربط الصور بالخلفيات */
+.bg-image-14 { background-image: url('./images/IMG-14.jpg'); }
+.bg-image-15 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/IMG-15.jpg'); }
+.bg-image-16 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/IMG-16.jpg'); }
+
+/* --- ستايل صفحة تسجيل الدخول (زي الصورة اللي بعتها بالظبط) --- */
+.login-box {
+    background: rgba(255, 255, 255, 0.02); /* شفافية شبه كاملة عشان الورد يبان */
+    border: 2px solid #000000; /* برواز أسود فحم */
+    padding: 40px; 
+    border-radius: 20px;
+    backdrop-filter: blur(5px); 
+    width: 85%; 
+    max-width: 350px;
+}
+
+.login-box h2 {
+    color: #000000; 
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+input { 
+    width: 100%; 
+    margin: 12px 0; 
+    padding: 14px; 
+    border-radius: 12px; 
+    background: transparent !important; 
+    border: 2px solid #000000 !important; /* برواز أسود واضح */
+    color: #000000 !important; 
+    font-weight: bold;
+    outline: none;
+}
+
+input::placeholder { color: rgba(0, 0, 0, 0.7); }
+
+button:not(.next-btn) { 
+    width: 100%; 
+    padding: 14px; 
+    border-radius: 12px; 
+    background: transparent !important; 
+    border: 2px solid #000000 !important; 
+    color: #000000 !important; 
+    font-weight: bold; 
+    margin-top: 15px; 
+    cursor: pointer;
+}
+
+/* --- ستايل الكلام والعداد (كلاسيك) --- */
+.text-container {
+    width: 90%;
+    max-width: 500px;
+    max-height: 55vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: softFade 2.5s ease-out forwards;
+}
+
+h1, .heart-words {
+    font-size: 19px;
+    line-height: 1.8;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    animation: softFade 3.5s ease-out forwards;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    animation: softFade 4.5s ease-out forwards;
+}
+
+.timer-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 80px;
+}
+
+.next-btn {
+    padding: 12px 40px;
+    background: transparent !important; 
+    color: #fff !important;
+    border: 1px solid #fff !important;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: softFade 5.5s ease-out forwards;
+}
+
+.hidden { display: none !important; }
+
+/* سكرول بار نحيف للمستطيل */
+.text-container::-webkit-scrollbar { width: 3px; }
+.text-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
